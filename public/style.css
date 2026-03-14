@@ -1,0 +1,129 @@
+/* --- Bagian Warna & Latar Global --- */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Ganti latar abu tua jadi biru langit sangat muda */
+  background-color: #e3f2fd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* --- Container Utama --- */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Shadow lebih lembut */
+  border-radius: 12px; /* Sudut lebih membulat */
+  overflow: hidden;
+}
+
+/* --- HEADER: Bagian "Gemini AI Chatbot" --- */
+h1 {
+  font-size: 18px;
+  /* GANTI: Dari Hijau WA jadi Biru Terang (misal warna Telegram/Twitter) */
+  background: #2196f3;
+  color: white;
+  margin: 0;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* --- Area Chat --- */
+#chat-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 12px;
+  /* Latar chat jadi putih bersih, nggak pake gambar ornamen WA */
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+/* --- Base Bubble --- */
+.message {
+  display: flex;
+  max-width: 80%;
+}
+
+.content {
+  padding: 10px 14px;
+  border-radius: 15px;
+  font-size: 14px;
+  line-height: 1.4;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* --- PESAN KAMU (JIA) - Di Kanan --- */
+.message.user {
+  align-self: flex-end;
+}
+
+/* GANTI: Warna background pesan kamu jadi biru muda soft */
+.message.user .content {
+  background-color: #bbdeffb6; /* Biru muda transparan */
+  color: #0d47a1; /* Teks biru tua biar kontras */
+  border-bottom-right-radius: 4px; /* Sudut lancip dikit */
+}
+
+/* --- PESAN GEMINI (BOT) - Di Kiri --- */
+.message.bot {
+  align-self: flex-start;
+}
+
+/* Bot tetep putih/abu muda biar netral */
+.message.bot .content {
+  background-color: #f1f3f4;
+  color: #333;
+  border-bottom-left-radius: 4px;
+}
+
+/* --- Bagian Input & Tombol --- */
+#chat-form {
+  display: flex;
+  padding: 15px;
+  background: #f8f9fa;
+  border-top: 1px solid #eee;
+}
+
+#user-input {
+  flex: 1;
+  padding: 12px 15px;
+  border: 1px solid #ddd; /* Kasih border tipis */
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+/* Efek pas input diklik */
+#user-input:focus {
+  border-color: #2196f3;
+}
+
+/* --- TOMBOL: "Send" --- */
+button {
+  /* GANTI: Tombol jadi warna biru terang sesuai header */
+  background: #2196f3;
+  color: white;
+  border: none;
+  padding: 0 25px;
+  margin-left: 10px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+/* Efek pas tombol ditunjuk mouse */
+button:hover {
+  background: #1976d2; /* Biru agak tua dikit */
+}
